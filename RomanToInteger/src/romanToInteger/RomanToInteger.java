@@ -10,7 +10,7 @@ public class RomanToInteger {
 			{"I", "1"}
 	};
 	public static void main(String[] args) {
-		String romanI = "I"; 
+		String romanI = "IX"; 
 		int previousValue = 0;
 		int total = 0;
 		int romValue = 0;
