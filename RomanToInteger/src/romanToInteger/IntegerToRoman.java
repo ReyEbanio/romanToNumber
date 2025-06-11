@@ -7,7 +7,7 @@ public class IntegerToRoman {
 		// Subtract
 		// 4 (IV), 9 (IX), 40 (XL), 90 (XC), 400 (CD) and 900 (CM).
 		// get count = repeat
-		int input = 3333;
+		int input = 2000;
 		String answer = "";
 		String checkValue = "";
 		String inputString = String.valueOf(input);
@@ -38,7 +38,7 @@ public class IntegerToRoman {
 
 	public static String getRomanEqui(String checkValue) {
 		String value = "";
-		String[][] integerRoman = { { "M", "1000" }, { "D", "500" }, { "C", "100" }, { "L", "50" }, { "X", "10" },
+		String[][] integerRoman = { { "X", "5000" },  { "M", "1000" }, { "D", "500" }, { "C", "100" }, { "L", "50" }, { "X", "10" },
 				{ "V", "5" }, { "I", "1" } };
 
 		int input = Integer.parseInt(checkValue);
@@ -60,8 +60,7 @@ public class IntegerToRoman {
 				if (belowValue * 4 != input) {
 					while ((input - belowValue) >= 0) {
 						if (input >= 1000) {
-							input -= toCompare;
-							System.out.println(toCompare);
+							input -= belowValue;
 							value += integerRoman[x][0];
 						} else {
 							input -= belowValue;
